@@ -44,7 +44,7 @@ console.log(numeriUtente);
 // SE UTENTE IMMETTE NUMERO UGUALE A uno dei numeriCasuali perde
 if (numeriDigitati == numeriCasuali){
 }
-//comunicare il numero di volte che l’utente ha inserito un numero consentito.
+//comunicazione del numero di volte che l’utente ha inserito un numero consentit + esito di vittoria se numero equivale e 16.
 if (numeriUtente.length == 16){
   alert("hai vinto");
 } else {
