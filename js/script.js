@@ -30,7 +30,7 @@ console.log(numeriCasuali);
 //...per fare ciò creo var sentinella con valore booleano che faccia si che alla scrittura di un numero ripetuto o presente nelle 16 cifre del computer l'utente perda
 var sentinella = true;
 
-while (numeriUtente.length < 16 && sentinella == true){
+while (numeriUtente.length < 84 && sentinella == true){
   var numeriDigitati = parseInt(prompt("inserisci numeri"))
   // se utente immette numero già inserito e un numero tra i 16 generati automaticamente HA Perso
   if (numeriUtente.includes(numeriDigitati) == false && numeriCasuali.includes(numeriDigitati) == false){
@@ -44,8 +44,8 @@ console.log(numeriUtente);
 // SE UTENTE IMMETTE NUMERO UGUALE A uno dei numeriCasuali perde
 if (numeriDigitati == numeriCasuali){
 }
-//comunicazione del numero di volte che l’utente ha inserito un numero consentit + esito di vittoria se numero equivale e 16.
-if (numeriUtente.length == 16){
+//comunicazione del numero di volte che l’utente ha inserito un numero consentito + esito di vittoria se numero equivale e 16.
+if (numeriUtente.length == 84){
   alert("hai vinto");
 } else {
   alert("hai totalizzato il seguente punteggio:" + numeriUtente.length);
