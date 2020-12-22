@@ -23,7 +23,16 @@ console.log(numeriCasuali)
 // CHIEDIAMO ALL'UTENTE DI SCEGLIERE 16 NUMERI:
 //1) uno per volta
 //2) non può onserire 2 volte stesso generaNumero
-//3) se becca un numero generato nella lista ramdom l'utente perde
+//3) se becca un numero generato nella lista casuale perde
+
+// inseriamo i 16 numeri, uno per volta attraverso, prompt
+//...per fare ciò creo var sentinella con valore booleano che faccia si che alla scrittura di un numero ripetuto o presente nelle 16 cifre del computer l'utente perda
+var sentinella = true;
+
+while (numeriCasuali.length) < 16 && sentinella == true){
+  var numeriInseriti = parseInt(prompt("inserisci numeri"))
+  if (numeriCasuali.includes(numeriInseriti))
+}
 
 
 // Funzioni
