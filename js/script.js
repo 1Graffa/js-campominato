@@ -18,7 +18,7 @@ while (numeriCasuali.lenght < 16){
     numeriCasuali.push(numero);
   }
 }
-console.log(numeriCasuali)
+console.log(numero)
 // Funzioni
 
 // genera numero random con valori min e max compresi
