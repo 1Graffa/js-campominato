@@ -45,7 +45,7 @@ console.log(numeriUtente);
 if (numeriDigitati == numeriCasuali){
 }
 //comunicare il numero di volte che l’utente ha inserito un numero consentito.
-if (numeriUtente == 16){
+if (numeriUtente.length == 16){
   alert("hai vinto");
 } else {
   alert("hai totalizzato il seguente punteggio:" + numeriUtente.length);
