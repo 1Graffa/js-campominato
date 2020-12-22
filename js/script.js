@@ -9,7 +9,7 @@
 // Creo l' Array dove saranno contenuti i 16 numeri casuali da 1 a 100
 numeriCasuali = [];
 // Uso while per generare numeri finchè non saranno composte 16 cifre casuali senza ripetizioni
-while (numeriCasuali.lenght < 16){
+while (numeriCasuali.length < 16){
   // creo variabile numero che sarà composta da tutti i valori da dell'intervallo da 1 a 100
   var numero = generaNumero(1,100);
   // ora con IF bisogna dire che compilando i 16 numeri non ci debbano essere ripetizioni quindi usiamo INCLUDES per segnalare che non vogliamo ripetizioni grazie ad un valore booleano:
@@ -18,7 +18,14 @@ while (numeriCasuali.lenght < 16){
     numeriCasuali.push(numero);
   }
 }
-console.log(numero)
+console.log(numeriCasuali)
+
+// CHIEDIAMO ALL'UTENTE DI SCEGLIERE 16 NUMERI:
+//1) uno per volta
+//2) non può onserire 2 volte stesso generaNumero
+//3) se becca un numero generato nella lista ramdom l'utente perde
+
+
 // Funzioni
 
 // genera numero random con valori min e max compresi
