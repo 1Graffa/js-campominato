@@ -6,8 +6,9 @@
 // 6) La partita termina quando il giocatore inserisce un numero “vietato” o raggiunge il numero massimo possibile di numeri consentiti.
 // 7) Al termine della partita il software deve comunicare il punteggio, cioè il numero di volte che l’utente ha inserito un numero consentito.
 
-// Creo l' Array dove saranno contenuti i 16 numeri casuali da 1 a 100
+// Creo l' Array dove saranno contenuti i 16 numeri casuali da 1 a 100 e quella dove si pusha ogni volta che il numero che inserirà l'utente va bene
 numeriCasuali = [];
+numeriUtente = [];
 // Uso while per generare numeri finchè non saranno composte 16 cifre casuali senza ripetizioni
 while (numeriCasuali.length < 16){
   // creo variabile numero che sarà composta da tutti i valori da dell'intervallo da 1 a 100
@@ -18,7 +19,7 @@ while (numeriCasuali.length < 16){
     numeriCasuali.push(numero);
   }
 }
-console.log(numeriCasuali)
+console.log(numeriCasuali);
 
 // CHIEDIAMO ALL'UTENTE DI SCEGLIERE 16 NUMERI:
 //1) uno per volta
@@ -29,11 +30,21 @@ console.log(numeriCasuali)
 //...per fare ciò creo var sentinella con valore booleano che faccia si che alla scrittura di un numero ripetuto o presente nelle 16 cifre del computer l'utente perda
 var sentinella = true;
 
-while (numeriCasuali.length) < 16 && sentinella == true){
-  var numeriInseriti = parseInt(prompt("inserisci numeri"))
-  if (numeriCasuali.includes(numeriInseriti))
+while (numeriUtente.length < 16 && sentinella == true){
+  var numeriDigitati = parseInt(prompt("inserisci numeri"))
+  // se utente immette numero già inserito e un numero tra i 16 generati automaticamente HA Perso
+  if (numeriUtente.includes(numeriDigitati) == false && numeriCasuali.includes(numeriDigitati) == false){
+    numeriUtente.push(numeriDigitati);
+  } else {
+    alert("hai perso");
+    sentinella = false;
+  }
 }
+console.log(numeriUtente);
+// SE UTENTE IMMMETTE NUMERO UGUALE A uno dei numeriCasuali perde
+if (numeriDigitati == numeriCasuali){
 
+}
 
 // Funzioni
 
