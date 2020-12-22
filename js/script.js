@@ -41,9 +41,14 @@ while (numeriUtente.length < 16 && sentinella == true){
   }
 }
 console.log(numeriUtente);
-// SE UTENTE IMMMETTE NUMERO UGUALE A uno dei numeriCasuali perde
+// SE UTENTE IMMETTE NUMERO UGUALE A uno dei numeriCasuali perde
 if (numeriDigitati == numeriCasuali){
-
+}
+//comunicare il numero di volte che l’utente ha inserito un numero consentito.
+if (numeriUtente == 16){
+  alert("hai vinto");
+} else {
+  alert("hai totalizzato il seguente punteggio:" + numeriUtente.length);
 }
 
 // Funzioni
